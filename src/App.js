@@ -1,5 +1,8 @@
-//
+import Clicker from "./Clicker.js";
+
 export default function App()
 {
-    return <h1>My Application</h1>
+    return <>
+        <Clicker />
+    </>
 }

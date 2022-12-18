@@ -31,7 +31,10 @@ yarn install
 ```
 
 4. Start the development server:
-```npm start```
+
+```
+npm start
+```
 
 or
 

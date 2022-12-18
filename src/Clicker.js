@@ -1,3 +1,6 @@
+// Notes about useState and hooks -> 
+// https://notes.herson.xyz/3+-+Studio+Notes/12/Documentation+-+First+React+App+-+2
+
 import { useState } from "react";
 
 export default function Clicker()

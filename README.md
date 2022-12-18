@@ -7,21 +7,38 @@ This is a simple React app that was created as a learning project. It demonstrat
 
 ## Installation
 1. Clone the repository:
-```git clone https://github.com/your-username/first-react-app.git```
+
+```
+git clone https://github.com/your-username/first-react-app.git
+```
+
 2. Navigate to the project directory:
-```cd first-react-app```
+
+```
+cd first-react-app
+```
+
 3. Install the dependencies:
-```npm install```
+
+```
+npm install
+```
 
 or
 
-```yarn install```
+```
+yarn install
+```
+
 4. Start the development server:
 ```npm start```
 
 or
 
-```yarn start```
+```
+yarn start
+```
+
 The app will be served at http://localhost:3000.
 
 License
@@ -31,10 +48,3 @@ Acknowledgments
 React documentation
 Create React App documentation
 I hope this helps! Let me know if you have any questions.
-
----
-
-  ___             _   
- | _ \___ __ _ __| |_ 
- |   / -_) _` / _|  _|
- |_|_\___\__,_\__|\__|

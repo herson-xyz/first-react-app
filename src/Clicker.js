@@ -1,6 +1,5 @@
-// Notes about useState and hooks -> 
-// https://notes.herson.xyz/3+-+Studio+Notes/12/Documentation+-+First+React+App+-+2
-
+// Notes about useState and hooks           -> https://notes.herson.xyz/3+-+Studio+Notes/12/ChatGPT+Documentation+-+First+React+App+-+2
+// Notes about useEffect and localstorage   -> https://notes.herson.xyz/3+-+Studio+Notes/12/ChatGPT+Documentation+-+First+React+App+-3
 import { useEffect, useState } from "react";
 
 export default function Clicker()

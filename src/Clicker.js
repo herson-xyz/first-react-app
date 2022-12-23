@@ -2,7 +2,7 @@
 // Notes about useEffect and localstorage   -> https://notes.herson.xyz/3+-+Studio+Notes/12/ChatGPT+Documentation+-+First+React+App+-3
 import { useEffect, useState } from "react";
 
-export default function Clicker({ keyName, color = 'darkOrchid'})                       // Destructuring the props being passed in from App.js. We can set a default value for color. 
+export default function Clicker({ increment, keyName, color = 'darkOrchid'})                       // Destructuring the props being passed in from App.js. We can set a default value for color. 
 {
     console.log(color)
 
@@ -29,6 +29,7 @@ export default function Clicker({ keyName, color = 'darkOrchid'})               
     {
         // setCount(value + 1)                                                          // this method doesn't work as well with async processes. We can get stale values. For better results, use method below.
         setCount(value => value + 1)                                                    // simplified arrow function, (value) => { return value + 1 }
+        increment()                                                                     // Call the increment function that was passed in as a prop from the parent component
     }
 
     return <div>

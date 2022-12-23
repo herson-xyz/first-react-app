@@ -1,6 +1,6 @@
 // Notes about useState and hooks           -> https://notes.herson.xyz/3+-+Studio+Notes/12/ChatGPT+Documentation+-+First+React+App+-+2
 // Notes about useEffect and localstorage   -> https://notes.herson.xyz/3+-+Studio+Notes/12/ChatGPT+Documentation+-+First+React+App+-3
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Clicker({ increment, keyName, color = 'darkOrchid'})                       // Destructuring the props being passed in from App.js. We can set a default value for color. 
 {
@@ -11,9 +11,12 @@ export default function Clicker({ increment, keyName, color = 'darkOrchid'})    
     // const setCount = countState[1]
 
     const [count, setCount] = useState(parseInt(localStorage.getItem(keyName) ?? 0))    // nullish coalescing operator -> If undefined, use 0
+    const buttonRef = useRef()
 
     useEffect(() =>                                                                     // setting an empty array as the second argument for useEffect will entail that the function gets called only for the first render
     {
+        buttonRef.current.style.background = 'papayawhip'                               // Setting the styles here serves no purpose other than to show how to properly call useRef after a component has been rendered
+        buttonRef.current.style.color = 'salmon'
         return () =>
         {
           localStorage.removeItem(keyName, color)  
@@ -34,6 +37,6 @@ export default function Clicker({ increment, keyName, color = 'darkOrchid'})    
 
     return <div>
         <div style={ { color: color } }>Clicks count: { count }</div>
-        <button onClick={ buttonClick }>Click Me</button>
+        <button ref={ buttonRef } onClick={ buttonClick }>Click Me</button>             {/* Associate the buttonRef to the element here */}
     </div>
 }

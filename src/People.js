@@ -11,15 +11,9 @@ export default function People()
 
     const getPeople = () => 
     {
-        const request = fetch('https://jsonplaceholder.typicode.com/users')
-        request.then((response) =>
-        {
-            const parse = response.json()
-            parse.then((result) =>
-            {
-                console.log(result);
-            })
-        })  
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(result => console.log(result))
     }
 
     useEffect(() =>
